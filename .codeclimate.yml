@@ -41,4 +41,4 @@ exclude_paths:
 - test/
 - vendor/
 - "app/assets/stylesheets/bootstrap.css"
-- "Gemfile.lock"
+- Gemfile.lock
