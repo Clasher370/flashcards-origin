@@ -22,7 +22,6 @@ engines:
     enabled: true
 ratings:
   paths:
-  - Gemfile.lock
   - "**.erb"
   - "**.haml"
   - "**.rb"
@@ -41,3 +40,5 @@ exclude_paths:
 - spec/
 - test/
 - vendor/
+- "app/assets/stylesheets/bootstrap.css"
+- "Gemfile.lock"
