@@ -4,3 +4,9 @@
 !/log/.keep
 !/tmp/.keep
 .idea
+config/database.yml
+config/secrets.yml
+config/application.yml
+.ruby-version
+.ruby-gemset
+/public/uploads
