@@ -1,4 +1,4 @@
-class ChangeFieldsForCards < ActiveRecord::Migration
+class ChangeFieldsForCards < ActiveRecord::Migration[5.1]
   def change
     rename_column :cards, :review_attempt, :quality
     rename_column :cards, :review_step, :interval
