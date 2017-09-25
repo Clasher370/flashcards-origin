@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class User < App
   has_many :cards, dependent: :destroy
   has_many :blocks, dependent: :destroy
   has_many :authentications, dependent: :destroy
