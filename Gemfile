@@ -3,15 +3,17 @@ source 'https://rubygems.org'
 ruby '2.3.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.9'
+gem 'rails', '5.0.6'
+# Use Puma as the app server
+gem 'puma', '~> 3.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.2'
 
 gem 'jquery-rails'
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder', '~> 2.5'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'responders', '~> 2.0'
 
