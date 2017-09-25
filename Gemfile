@@ -40,3 +40,5 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
 end
+
+gem 'listen', '>= 3.0.5', '< 3.2', group: :development
