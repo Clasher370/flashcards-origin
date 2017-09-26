@@ -263,7 +263,7 @@ Style/EmptyLiteral:
 Style/EmptyMethod:
   Description: 'Checks the formatting of empty method definitions.'
   StyleGuide: '#no-single-line-methods'
-  Enabled: true
+  Enabled: false
 
 Style/EndBlock:
   Description: 'Avoid the use of END blocks.'
@@ -638,7 +638,7 @@ Style/ParallelAssignment:
                   It will only warn when the number of variables
                   matches on both sides of the assignment.
   StyleGuide: '#parallel-assignment'
-  Enabled: true
+  Enabled: false
 
 Style/ParenthesesAroundCondition:
   Description: >-
@@ -1706,7 +1706,7 @@ Bundler/DuplicatedGem:
 Bundler/OrderedGems:
   Description: >-
                  Gems within groups in the Gemfile should be alphabetically sorted.
-  Enabled: true
+  Enabled: false
   Include:
     - '**/Gemfile'
     - '**/gems.rb'

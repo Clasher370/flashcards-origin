@@ -25,7 +25,7 @@ class SuperMemo
     end
 
     def set_efactor(efactor, quality)
-      efactor = efactor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02))
+      efactor += (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02))
       efactor < 1.3 ? 1.3 : efactor
     end
 

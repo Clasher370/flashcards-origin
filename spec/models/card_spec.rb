@@ -24,22 +24,19 @@ describe Card do
       it 'texts' do
         card.original_text, card.translated_text = '', ''
         card.save
-        expect(card.errors[:original_text]).
-            to include('Вводимые значения должны отличаться.')
+        expect(card.errors[:original_text]).to include('Вводимые значения должны отличаться.')
       end
 
       it 'user_id' do
         card.user_id = nil
         card.save
-        expect(card.errors[:user_id]).
-            to include('Ошибка ассоциации.')
+        expect(card.errors[:user_id]).to include('Ошибка ассоциации.')
       end
 
       it 'block_id' do
         card.block_id = nil
         card.save
-        expect(card.errors[:block_id]).
-            to include('Выберите колоду из выпадающего списка.')
+        expect(card.errors[:block_id]).to include('Выберите колоду из выпадающего списка.')
       end
     end
 
@@ -47,15 +44,13 @@ describe Card do
       it 'gives an error' do
         card.translated_text = 'дом'
         card.save
-        expect(card.errors[:original_text]).
-            to include('Вводимые значения должны отличаться.')
+        expect(card.errors[:original_text]).to include('Вводимые значения должны отличаться.')
       end
 
       it 'no case sensitive, and gives error' do
         card.original_text, card.translated_text = 'Дом', 'доМ'
         card.save
-        expect(card.errors[:original_text]).
-            to include('Вводимые значения должны отличаться.')
+        expect(card.errors[:original_text]).to include('Вводимые значения должны отличаться.')
       end
     end
 
@@ -75,8 +70,7 @@ describe Card do
       end
 
       it '#set_review_date' do
-        expect(card.review_date.strftime('%Y-%m-%d %H:%M')).
-            to eq(Time.zone.now.strftime('%Y-%m-%d %H:%M'))
+        expect(card.review_date.strftime('%Y-%m-%d %H:%M')).to eq(Time.zone.now.strftime('%Y-%m-%d %H:%M'))
       end
     end
   end
@@ -96,7 +90,7 @@ describe Card do
 
     context '#full_downcase' do
       before do
-        card.original_text, card.translated_text = 'ДоМ','hOuSe'
+        card.original_text, card.translated_text = 'ДоМ', 'hOuSe'
         card.save
       end
 
