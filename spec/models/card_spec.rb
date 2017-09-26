@@ -3,8 +3,13 @@ require 'rails_helper'
 describe Card do
   let!(:user) { create(:user) }
   let!(:block) { create(:block, user_id: user.id) }
-  let(:card) { build(:card, original_text: 'дом', translated_text: 'house',
-                     user_id: user.id, block_id: block.id)}
+  let(:card) do
+    build(:card,
+          original_text: 'дом',
+          translated_text: 'house',
+          user_id: user.id,
+          block_id: block.id)
+  end
 
   context '#create' do
     context 'without' do
@@ -17,8 +22,7 @@ describe Card do
       it 'translated text' do
         card.translated_text = ''
         card.save
-        expect(card.errors[:translated_text]).
-            to include('Необходимо заполнить поле.')
+        expect(card.errors[:translated_text]).to include('Необходимо заполнить поле.')
       end
 
       it 'texts' do
