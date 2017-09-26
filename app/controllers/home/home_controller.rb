@@ -1,21 +1,12 @@
-class Home::HomeController < Home::BaseController
+module Home
+  class HomeController < BaseController
+    def index
+      @card = CardOnIndex.setter(params[:id], current_user)
 
-  def index
-    if params[:id]
-      @card = current_user.cards.find(params[:id])
-    else
-      if current_user.current_block
-        @card = current_user.current_block.cards.pending.first
-        @card ||= current_user.current_block.cards.repeating.first
-      else
-        @card = current_user.cards.pending.first
-        @card ||= current_user.cards.repeating.first
+      respond_to do |format|
+        format.html
+        format.js
       end
-    end
-
-    respond_to do |format|
-      format.html
-      format.js
     end
   end
 end
